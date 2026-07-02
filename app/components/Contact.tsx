@@ -13,7 +13,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-gray-300 mt-5">
-            Působíme v Praze a okolí. Po domluvě realizujeme zakázky po celé České republice.
+            Kontaktujte nás a my se vám co nejdříve ozveme.
           </p>
         </div>
 
@@ -27,31 +27,87 @@ export default function Contact() {
             <div className="space-y-5 text-xl">
               <p>📞 +420 774 898 947</p>
               <p>📧 lpstav01@gmail.com</p>
-              <p>📍 Praha 18 — Letňany</p>
+              <p>📍 Praha 18 – Letňany</p>
             </div>
 
-            <a
-              href="tel:+420774898947"
-              className="inline-block mt-8 bg-yellow-500 text-black px-7 py-4 rounded-xl font-bold hover:bg-yellow-400 transition"
-            >
-              Zavolat nyní
-            </a><a
-  href="mailto:lpstav01@gmail.com?subject=Nezávazná%20poptávka&body=Dobrý%20den,%0A%0AMám%20zájem%20o%20stavební%20práce.%0A%0AJméno:%20%0ATelefon:%20%0AAdresa:%20%0APopis%20zakázky:%20"
-  className="inline-block mt-4 ml-0 md:ml-4 bg-white text-black px-7 py-4 rounded-xl font-bold hover:bg-gray-200 transition"
->
-  ✉️ Odeslat poptávku
-</a>
+            <div className="mt-8 rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=Praha%2018%20Letnany&output=embed"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-lg min-h-[350px]">
-            <iframe
-              src="https://www.google.com/maps?q=Praha%2018%20Letnany&output=embed"
-              width="100%"
-              height="350"
-              style={{ border: 0 }}
-              loading="lazy"
-            ></iframe>
-          </div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="bg-white text-black rounded-2xl p-8 shadow-lg"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="abca9500-7069-4201-a0fd-a7fa846798a1"
+            />
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Nová poptávka z webu LPSTAV"
+            />
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="LPSTAV Web"
+            />
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              style={{ display: "none" }}
+            />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Jméno"
+              required
+              className="w-full p-4 border rounded-xl mb-4"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+              className="w-full p-4 border rounded-xl mb-4"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Telefon"
+              className="w-full p-4 border rounded-xl mb-4"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Popis zakázky"
+              rows={6}
+              required
+              className="w-full p-4 border rounded-xl mb-6"
+            ></textarea>
+
+            <button
+              type="submit"
+              className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-xl transition"
+            >
+              Odeslat poptávku
+            </button>
+          </form>
 
         </div>
 
