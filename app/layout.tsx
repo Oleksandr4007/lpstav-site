@@ -1,8 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "LPSTAV S.R.O.",
-  description: "Kompletní stavební práce po celé České republice",
+  title: "LPSTAV S.R.O. | Stavební práce Praha",
+  description:
+    "LPSTAV S.R.O. nabízí rekonstrukce, fasády, obklady, dlažby, zámkovou dlažbu a kompletní stavební práce v Praze a okolí.",
+  keywords:
+    "stavební práce Praha, rekonstrukce Praha, fasády Praha, zámková dlažba Praha, obklady Praha, LPSTAV",
 };
 
 export default function RootLayout({
