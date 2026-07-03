@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 export default function Gallery() {
   const images = [
-    { src: "/images/fasada1.jpg", title: "Fasády" },
-    { src: "/images/fasada2.jpg", title: "Renovace fasády" },
-    { src: "/images/dlazba1.jpg", title: "Zámková dlažba" },
-    { src: "/images/dlazba2.jpg", title: "Venkovní dlažba" },
-    { src: "/images/koupelna1.jpg", title: "Koupelny" },
+    { src: "/images/Fasada.jpg", title: "Fasády" },
+    { src: "/images/Fasada1.jpg", title: "Renovace fasády" },
+    { src: "/images/Dlazba.jpg", title: "Zámková dlažba" },
+    { src: "/images/Dlazba1.jpg", title: "Venkovní dlažba" },
+    { src: "/images/Koupelna.jpg", title: "Koupelny" },
     { src: "/images/hero.jpg", title: "Stavební práce" },
   ];
 
@@ -30,12 +32,14 @@ export default function Gallery() {
           {images.map((image) => (
             <div
               key={image.src}
-              className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+              className="group relative h-72 overflow-hidden rounded-2xl shadow-lg cursor-pointer"
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.title}
-                className="h-72 w-full object-cover group-hover:scale-110 transition duration-500"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-110 transition duration-500"
               />
 
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end">
