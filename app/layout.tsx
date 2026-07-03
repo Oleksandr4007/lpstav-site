@@ -1,5 +1,6 @@
 import "./globals.css";
-
+import "aos/dist/aos.css";
+import AOSProvider from "./components/AOSProvider";
 export const metadata = {
   title: "LPSTAV S.R.O. | Stavební práce Praha",
   description:
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-      <body>{children}</body>
+      <body>
+  <AOSProvider />
+  {children}
+</body>
     </html>
   );
 }
